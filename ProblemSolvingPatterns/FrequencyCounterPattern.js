@@ -1,3 +1,8 @@
+// write function that accepts two arrays
+// the function should return true if every value in the array
+// has corresponding value squared in the second array.
+// the frequency of value must be the same
+
 same = (arr1, arr2) => {
   if (arr1.length !== arr2.length) {
     return false;
