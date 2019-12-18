@@ -8,26 +8,26 @@ same = (arr1, arr2) => {
   if (arr1.length !== arr2.length) {
     return false;
   }
-
   // Create 2 empty objects where the count will be stored
   let count1 = {};
   let count2 = {};
-
   // loop through first array and get the count
   for (let val of arr1) {
+    // if value doesnt exist set 0 then add 1 to the 0
     count1[val] = (count1[val] || 0) + 1;
   }
   // loop through second array and get the count
   for (let val of arr2) {
+    // if value doesnt exist set 0 then add 1 to the 0
     count2[val] = (count2[val] || 0) + 1;
   }
 
   // loop through count1
-  for (let key in count1) {
+  for (let keys in count1) {
     //check if key** is in count2
-    if (!(key ** 2 in count2)) return false;
-    // check if the values correspond e.i if there are two 1s we have to check if there are two 4s
-    if (count2[key ** 2] !== count1[key]) return false;
+    if (!count2[keys ** 2]) return false;
+    // check to see frequency of count1 matches frequency of count2 squares
+    if (count2[keys ** 2] !== count1[keys]) return false;
   }
 
   return true;
