@@ -30,3 +30,9 @@ sumZero = arr => {
 console.log(sumZero([-3, -2, -1, 0, 1, 2, 3, 10])); //[-3, 3]
 console.log(sumZero([-2, 0, 1, 3])); // undefined
 console.log(sumZero([1, 2, 3])); // undefined
+
+// Mulitple Pointers
+// Creating pointers or values that correspond to an index or
+// position and move towards the beginningm end or middle based on
+// a certain condition, very efficient for solving problems with
+// minimal space complexity as well
