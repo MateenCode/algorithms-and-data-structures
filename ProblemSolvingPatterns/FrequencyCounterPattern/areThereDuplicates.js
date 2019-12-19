@@ -1,9 +1,17 @@
-// functions which accepts a variable numbers of arguemnts
-// and checks wether are any duplicates among the arguments passed in.
-// You can solve this using the frequency counter pattern OR the multiple pointer pattern
+// functions which accepts a variable numbers of arguments
+// and checks whether there are any duplicates among the arguments passed in.
 
-function areThereDuplicates() {
-  // good luck. (supply any arguments you deem necessary.)
+function areThereDuplicates(...arr) {
+  let count = {};
+
+  for (let i = 0; i < arr.length; i++) {
+    count[arr[i]] ? count[arr[i]]++ : (count[arr[i]] = 1);
+  }
+
+  for (let val in count) {
+    if (count[val] === 2) return true;
+  }
+  return false;
 }
 
 console.log(areThereDuplicates(1, 2, 3)); // false
