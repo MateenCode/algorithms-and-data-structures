@@ -5,14 +5,16 @@
 
 sumZero = arr => {
   // start left of array & right of array
-  let left = 0;
+
+  let left = arr[0];
   let right = arr.length - 1;
-  //while left is less then right
+
   while (left < right) {
     // check sum of left and right
     let sum = arr[left] + arr[right];
-    // check if sum is zero if so return the pair
+    // check sum of left and right
     if (sum === 0) {
+      // check if sum is zero if so return the pair
       return [arr[left], arr[right]];
       // if sum is greater then zero
     } else if (sum > 0) {
@@ -26,7 +28,6 @@ sumZero = arr => {
 };
 // Time Complexity - O(N)
 // Space Complexity - O(1)
-
 console.log(sumZero([-3, -2, -1, 0, 1, 2, 3, 10])); //[-3, 3]
 console.log(sumZero([-2, 0, 1, 3])); // undefined
 console.log(sumZero([1, 2, 3])); // undefined
