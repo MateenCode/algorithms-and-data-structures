@@ -5,7 +5,6 @@
 
 sumZero = arr => {
   // start left of array & right of array
-
   let left = arr[0];
   let right = arr.length - 1;
 
