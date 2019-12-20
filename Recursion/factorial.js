@@ -6,3 +6,4 @@ function factorial(num) {
 }
 
 console.log(factorial(5));
+// 5 factorial 5!  = 5 * 4 * 3 * 2 * 1

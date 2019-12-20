@@ -9,7 +9,7 @@ function areThereDuplicates(...arr) {
   }
 
   for (let val in count) {
-    if (count[val] === 2) return true;
+    if (count[val] > 1) return true;
   }
   return false;
 }

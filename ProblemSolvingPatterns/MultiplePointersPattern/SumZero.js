@@ -6,7 +6,9 @@
 sumZero = arr => {
   // start left of array & right of array
   let left = arr[0];
-  let right = arr.length - 1;
+  let right = arr.length - 1; // return 7
+
+  console.log(left, right);
 
   while (left < right) {
     // check sum of left and right
@@ -28,8 +30,8 @@ sumZero = arr => {
 // Time Complexity - O(N)
 // Space Complexity - O(1)
 console.log(sumZero([-3, -2, -1, 0, 1, 2, 3, 10])); //[-3, 3]
-console.log(sumZero([-2, 0, 1, 3])); // undefined
-console.log(sumZero([1, 2, 3])); // undefined
+// console.log(sumZero([-2, 0, 1, 3])); // undefined
+// console.log(sumZero([1, 2, 3])); // undefined
 
 // Mulitple Pointers
 // Creating pointers or values that correspond to an index or
