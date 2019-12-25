@@ -4,27 +4,14 @@
 // zero or undefined if a pair does not exist
 
 sumZero = arr => {
-  // start left of array & right of array
-  let left = arr[0];
-  let right = arr.length - 1; // return 7
+  let start = arr[0];
+  let end = arr.length - 1;
 
-  console.log(left, right);
-
-  while (left < right) {
-    // check sum of left and right
-    let sum = arr[left] + arr[right];
-    // check sum of left and right
-    if (sum === 0) {
-      // check if sum is zero if so return the pair
-      return [arr[left], arr[right]];
-      // if sum is greater then zero
-    } else if (sum > 0) {
-      // substract 1 from the right
-      right--;
-    } else {
-      // if sum is not greater then 0 and also not equal 0 then left++
-      left++;
-    }
+  while (start < end) {
+    let sum = arr[start] + arr[end];
+    if (sum === 0) return [arr[start], arr[end]];
+    else if (sum > 0) end--;
+    else start++;
   }
 };
 // Time Complexity - O(N)

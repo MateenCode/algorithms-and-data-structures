@@ -4,21 +4,15 @@
 // array, but it will always be sorted
 
 countUniqueValues = arr => {
-  // check for empty array
   if (arr.length === 0) return 0;
-  // set first pointer
+
   let i = 0;
-  // loop that start at index of 1 loop through array length
   for (let j = 1; j < arr.length; j++) {
-    //check if first pointer arr[i] is not equal too arr[j]
     if (arr[i] !== arr[j]) {
-      // move up the first pointer
       i++;
-      // set the first pointer to second pointers value
       arr[i] = arr[j];
     }
   }
-  // return the first pointer plus 1 one to get the length
   return i + 1;
 };
 
