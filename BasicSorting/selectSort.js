@@ -1,7 +1,7 @@
 // Similar to bubble sort, but instead of first placeing large values
 // into sorted poition, it places small values into sorted position
 
-function selectionSort(arr) {
+function selectSort(arr) {
   const swap = (arr, idx1, idx2) =>
     ([arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]);
 
@@ -18,5 +18,5 @@ function selectionSort(arr) {
   return arr;
 }
 
-selectionSort([0, 2, 34, 22, 10, 19, 17]);
+console.log(selectSort([0, 2, 34, 22, 10, 19, 17]));
 // Big O  O(n^2)
