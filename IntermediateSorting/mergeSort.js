@@ -1,4 +1,8 @@
-// Merge function from earlier
+// divide the bigger problem into smaller problems and
+// then solve each of the small problems in order to solve the
+// bigger problem that we started out with.
+
+// Merging 2 Arrays
 function merge(arr1, arr2) {
   let results = [];
   let i = 0;
@@ -31,5 +35,5 @@ function mergeSort(arr) {
   let right = mergeSort(arr.slice(mid));
   return merge(left, right);
 }
-
-mergeSort([10, 24, 76, 73]);
+// Big O  O(n log n)
+console.log(mergeSort([10, 24, 76, 73]));
