@@ -3,13 +3,11 @@
 
 function areThereDuplicates(...arr) {
   let count = {};
-
   for (let i = 0; i < arr.length; i++) {
     count[arr[i]] ? count[arr[i]]++ : (count[arr[i]] = 1);
   }
-
-  for (let val in count) {
-    if (count[val] > 1) return true;
+  for (let key in count) {
+    if (count[key] > 1) return true;
   }
   return false;
 }

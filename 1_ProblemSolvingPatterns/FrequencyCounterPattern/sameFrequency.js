@@ -5,18 +5,16 @@ function sameFrequency(num1, num2) {
   num1 = num1.toString().split("");
   num2 = num2.toString().split("");
 
-  if (num1.length !== num2.length) {
-    return false;
-  }
+  if (num1.length !== num2.length) return false;
 
   let count = {};
   for (let val of num1) {
-    count[val] = (count[val] || 0) + 1;
+    count[val] ? count[val]++ : (count[val] = 1);
   }
 
   for (let i = 0; i < num2.length; i++) {
     if (!count[num2[i]]) return false;
-    count[num2[i]] -= 1;
+    count[num2[i]]--;
   }
   return true;
 }
