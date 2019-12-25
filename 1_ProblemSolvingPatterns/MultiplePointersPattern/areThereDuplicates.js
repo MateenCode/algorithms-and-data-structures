@@ -11,9 +11,7 @@ function areThereDuplicates(...arr) {
     if (sorted[start] !== sorted[next]) {
       start++;
       next++;
-    } else {
-      return true;
-    }
+    } else return true;
   }
   return false;
 }
