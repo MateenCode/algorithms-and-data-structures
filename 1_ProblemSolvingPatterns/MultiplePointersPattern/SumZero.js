@@ -4,15 +4,16 @@
 // zero or undefined if a pair does not exist
 
 sumZero = arr => {
-  let start = arr[0];
-  let end = arr.length - 1;
+  let left = arr[0];
+  let right = arr.length - 1;
 
-  while (start < end) {
-    let sum = arr[start] + arr[end];
-    if (sum === 0) return [arr[start], arr[end]];
-    else if (sum > 0) end--;
-    else start++;
+  while (left < right) {
+    let sum = arr[left] + arr[right];
+    if (sum === 0) return [arr[left], arr[right]];
+    else if (sum > 0) right--;
+    else left++;
   }
+  return undefined;
 };
 // Time Complexity - O(N)
 // Space Complexity - O(1)

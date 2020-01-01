@@ -8,6 +8,7 @@ function sameFrequency(num1, num2) {
   if (num1.length !== num2.length) return false;
 
   let count = {};
+
   for (let val of num1) {
     count[val] ? count[val]++ : (count[val] = 1);
   }
@@ -16,6 +17,7 @@ function sameFrequency(num1, num2) {
     if (!count[num2[i]]) return false;
     count[num2[i]]--;
   }
+
   return true;
 }
 

@@ -5,14 +5,14 @@
 function averagePair(arr, target) {
   if (arr.length === 0) return false;
 
-  let start = arr[0];
-  let end = arr.length - 1;
+  let left = arr[0];
+  let right = arr.length - 1;
 
-  while (start < end) {
-    let avg = (arr[start] + arr[end]) / 2;
+  while (left < right) {
+    let avg = (arr[right] + arr[left]) / 2;
     if (avg === target) return true;
-    else if (avg < target) start++;
-    else end--;
+    else if (avg < target) left++;
+    else right--;
   }
   return false;
 }
