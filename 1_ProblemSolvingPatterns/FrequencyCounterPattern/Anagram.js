@@ -3,13 +3,14 @@
 
 function validAnagram(first, second) {
   if (first.length !== second.length) return false;
+
   let lookup = {};
 
   for (let i = 0; i < first.length; i++) {
     lookup[first[i]] ? lookup[first[i]]++ : (lookup[first[i]] = 1);
   }
 
-  for (let i = 0; i < second.length; i++) {
+  for (let i = 0; second.length; i++) {
     if (!lookup[second[i]]) return false;
     lookup[second[i]]--;
   }
